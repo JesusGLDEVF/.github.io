@@ -36,6 +36,27 @@ header h1{
     text-align: center;
 }
 
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li{
+    margin: 0 15px;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+
 header{
     background-color: rgb(191, 229, 67);
     color: rgb(11, 151, 151);
