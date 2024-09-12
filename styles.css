@@ -1,0 +1,43 @@
+/*Selector Universal*/
+*{
+    margin: 0; /*espacio exterior*/
+    padding: 0; /*espacio interior*/
+    box-sizing: border-box;
+}
+
+
+h1{
+    border: 1px rgb(163, 169, 41) solid;
+    width: 180px;
+    height: 150px;
+    padding:  8px;
+    margin: 10px;
+}
+/*selector de tipo etiqueta*/
+body{
+    background-color: darkorange;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6; /*interlineado*/
+
+}
+
+/*selector de tipo clase*/
+.estilo{
+    background-color: rgb(61, 194, 35);
+}
+
+.contenedor{
+    width: 80%;
+    margin:  0 auto;
+  
+}
+/*selector avanzado*/
+header h1{
+    text-align: center;
+}
+
+header{
+    background-color: rgb(191, 229, 67);
+    color: rgb(11, 151, 151);
+    padding: 10px 0;
+}
