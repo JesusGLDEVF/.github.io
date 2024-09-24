@@ -23,7 +23,7 @@ body{
 
 /*selector de tipo clase*/
 .estilo{
-    background-color: rgb(61, 194, 35);
+    background-color: rgb(110, 151, 216);
 }
 
 .contenedor{
@@ -43,7 +43,7 @@ nav ul{
 }
 
 nav ul li{
-    margin: 0 15px;
+    margin: 1.5 15px;
 }
 
 nav ul li a{
@@ -61,4 +61,14 @@ header{
     background-color: rgb(191, 229, 67);
     color: rgb(11, 151, 151);
     padding: 10px 0;
+}
+.estilo{
+    background-color: azure;
+    padding: 20px;
+    margin: 20px 0;
+    transition: backgroud-color 0.3s ease;
+}
+
+.estilo:hover{ /*animacion de backgroud color*/
+    background-color: rgb(0, 213, 255); 
 }
