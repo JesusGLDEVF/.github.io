@@ -72,3 +72,57 @@ header{
 .estilo:hover{ /*animacion de backgroud color*/
     background-color: rgb(0, 213, 255); 
 }
+
+.cta-button{
+    background-color: orangered;
+    color: white;
+    padding: 10px 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 23px;
+}
+
+.cta-button:hover{
+    background-color: rgba(249, 67, 0, 0.949);
+}
+
+/*estilos a los contenedores de tarjetas*/
+
+.menu-contenedor{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 15px;
+
+}
+
+.card{
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    width: 250px;
+    margin: 15px;
+    text-align: center;
+    transition:transform 0.3s ease;
+
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+.card img{
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+footer{
+    background-color: aqua;
+    text-align: center;
+    padding: 16px;
+    width: 100%;
+    position:fixed;
+    bottom: 0;
+}
