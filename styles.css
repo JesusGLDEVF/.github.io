@@ -127,14 +127,7 @@ header {
 }
 
 
-
-
-
 /*estilos a los contenedores de tarjetas*/
-
-
-
-
 
 
 .menu-contenedor {
@@ -206,33 +199,7 @@ footer {
     bottom: 0;
 }
 
-@media screen and (max-width:320px) {
-    .prueba {
-        background-color: pink;
-    }
 
-    .prueba2 {
-        font-size: 2em;
-    }
-}
-
-#logo {
-    width: 400px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-}
-
-@media screen and (max-width:320px) {
-    #logo {
-        width: 300px;
-        height: auto;
-        margin: 0 auto;
-        display: block;
-        border-radius: 50%;
-    }
-
-}
 
 /*media querieis para paginas pequeñas*/
 
@@ -282,6 +249,33 @@ footer {
 
     .card{
         width: 90%;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+    .prueba {
+        background-color: rgb(179, 242, 7);
+    }
+    .prueba2 {
+        font-size: 1.5em;
+    }
+}
+
+#logo {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+@media screen and (max-width:320px) {
+    #logo {
+        width: 200px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        border-radius: 50%;
     }
 
 }
