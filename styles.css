@@ -1,79 +1,88 @@
 /*Selector Universal*/
-*{
-    margin: 0; /*espacio exterior*/
-    padding: 0; /*espacio interior*/
+* {
+    margin: 0;
+    /*espacio exterior*/
+    padding: 0;
+    /*espacio interior*/
     box-sizing: border-box;
 }
 
 
-h1{
+h1 {
     border: 1px rgb(163, 169, 41) solid;
     width: 180px;
     height: 150px;
-    padding:  8px;
+    padding: 8px;
     margin: 10px;
 }
+
 /*selector de tipo etiqueta*/
-body{
+body {
     background-color: darkorange;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6; /*interlineado*/
+    line-height: 1.6;
+    /*interlineado*/
 
 }
 
 /*selector de tipo clase*/
-.estilo{
+.estilo {
     background-color: rgb(110, 151, 216);
 }
 
-.contenedor{
+.contenedor {
     width: 80%;
-    margin:  0 auto;
-  
-}
-/*selector avanzado*/
-header h1{
-    text-align: center;
+    margin: 0 auto;
 }
 
-nav ul{
+/*selector avanzado*/
+header h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
 }
 
-nav ul li{
-    margin: 1.5 15px;
+nav ul li {
+    margin: 0 20px;
 }
 
-nav ul li a{
+nav ul li a {
     color: black;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     text-decoration: underline;
 }
 
 
-header{
+header {
     background-color: rgb(191, 229, 67);
     color: rgb(11, 151, 151);
     padding: 10px 0;
+    text-align: center;
 }
-.estilo{
+
+.estilo {
     background-color: azure;
     padding: 20px;
     margin: 20px 0;
     transition: backgroud-color 0.3s ease;
 }
 
-.estilo:hover{ /*animacion de backgroud color*/
-    background-color: rgb(0, 213, 255); 
+.estilo:hover {
+    /*animacion de backgroud color*/
+    background-color: rgb(0, 213, 255);
 }
 
-.cta-button{
+.cta-button {
     background-color: orangered;
     color: white;
     padding: 10px 2px;
@@ -84,33 +93,33 @@ header{
     margin-top: 23px;
 }
 
-.cta-button:hover{
+.cta-button:hover {
     background-color: rgba(249, 67, 0, 0.949);
 }
 
 /*seccion de nhistoria*/
 
-.historia-grid{
-    display:grid;
+.historia-grid {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     align-items: start;
     padding: 10px;
 }
 
-.historia-grid img{
+.historia-grid img {
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
     grid-column: 1/3;
 }
 
-.historia-grid h2{
+.historia-grid h2 {
     grid-column: 2/3;
     font-size: 2.5rem;
 }
 
-.historia-grid p{
+.historia-grid p {
     grid-column: 3/4;
     font-size: 1.5rem;
     text-align: justify;
@@ -128,7 +137,7 @@ header{
 
 
 
-.menu-contenedor{
+.menu-contenedor {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -136,34 +145,35 @@ header{
 
 }
 
-.card{
+.card {
     background-color: blanchedalmond;
     border-radius: 10px;
     width: 250px;
     margin: 15px;
     text-align: center;
-    transition:transform 0.3s ease;
+    transition: transform 0.3s ease;
 
 }
 
-.card:hover{
+.card:hover {
     transform: translateY(-5px);
 }
-.card img{
+
+.card img {
     width: 100%;
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.contpersonal{
+.contpersonal {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     padding: 15px;
 }
 
-.personal-card{
+.personal-card {
     background-color: bisque;
     border-radius: 10px;
     text-align: center;
@@ -171,27 +181,107 @@ header{
     transition: transform 0.3s ease;
 }
 
-.personal-card:hover{
+.personal-card:hover {
     transform: translateY(-5px);
 }
 
-.personal-card img{
+.personal-card img {
     border-radius: 50%;
     width: 180px;
     height: 100px;
     object-fit: cover;
     margin-top: 12px;
-    }
+}
 
 
 
 
 
-footer{
+footer {
     background-color: aqua;
     text-align: center;
     padding: 16px;
     width: 100%;
-    position:fixed;
+    position: fixed;
     bottom: 0;
+}
+
+@media screen and (max-width:320px) {
+    .prueba {
+        background-color: pink;
+    }
+
+    .prueba2 {
+        font-size: 2em;
+    }
+}
+
+#logo {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+@media screen and (max-width:320px) {
+    #logo {
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        border-radius: 50%;
+    }
+
+}
+
+/*media querieis para paginas pequeñas*/
+
+@media (max-width:748px) {
+    .contenedor{
+        width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .historia-grid{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .historia-grid img, .historia-grid p, .historia-grid h2 {
+        grid-column: 1/2;
+        width: 100%;
+    } 
+
+    .menu-contenedor{
+    flex-direction: columns;
+    align-items: center;
+    }
+    
+    .contpersonal{
+        grid-template-columns: repeat(auto-fit, minmax (150px, 1fr));
+    }
+}
+
+/*media quieris para pantallas aun mas chicas*/
+
+@media (max-width:480px){
+    .estilo h2{
+        font-size: 1.7 em;
+    }
+    .estilo p{
+        font-size: 1em;
+    }
+
+    .cta-button{
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .card{
+        width: 90%;
+    }
+
 }
