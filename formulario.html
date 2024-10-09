@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+</html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Solicitud de reseña</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+<body>
+    <main>
+        <header>
+            <img id="logo" src="images/logo.png" alt="Glitch Reviews logo">
+            <div class="contenedor">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="">Nuestra historia</a></li>
+                        <li><a href="">Menu</a></li>
+                        <li><a href="">Personal</a></li>
+                        <li><a href="">Redes Sociales</li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+
+        <section class="estilo-formulario" id="Nuestra-Historia">
+            <div class="caja">
+                <h2>Solicita tu Reseña</h2>
+
+                <form action="enviar.php" method="post"> <label for="nombre_juego">Nombre del Juego:</label>
+                    <input type="text" id="nombre_juego" name="nombre_juego" required>
+
+                    <label for="plataforma">Plataforma:</label>
+                    <select id="plataforma" name="plataforma">
+                        <option value="PC">PC</option>
+                        <option value="PlayStation">PlayStation</option>
+                        <option value="Xbox">Xbox</option>
+                        <option value="Nintendo">Nintendo</option>
+                        <option value="Móvil">Móvil</option> 
+
+                        <option value="Otro">Otro</option>
+                    </select>
+
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" rows="5"></textarea>
+
+                    <button type="submit">Enviar Solicitud</button>
+            </div>
+            </form>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+        <div class="prueba">
+            <p class="prueba2">Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+
+</html>

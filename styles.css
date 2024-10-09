@@ -14,6 +14,7 @@ h1 {
     height: 150px;
     padding: 8px;
     margin: 10px;
+
 }
 
 /*selector de tipo etiqueta*/
@@ -26,9 +27,6 @@ body {
 }
 
 /*selector de tipo clase*/
-.estilo {
-    background-color: rgb(110, 151, 216);
-}
 
 .contenedor {
     width: 80%;
@@ -68,7 +66,11 @@ header {
     color: rgb(11, 151, 151);
     padding: 10px 0;
     text-align: center;
+    text-decoration: none;
+
 }
+
+
 header:hover {
     /*animacion de backgroud color*/
     background-color: rgb(0, 213, 255);
@@ -79,6 +81,7 @@ header:hover {
     padding: 20px;
     margin: 20px 0;
     transition: backgroud-color 0.3s ease;
+
 }
 
 .estilo:hover {
@@ -86,22 +89,35 @@ header:hover {
     background-color: rgb(0, 213, 255);
 }
 
+
+
+
 .cta-button {
     background-color: rgb(255, 180, 50);
     color: white;
-    padding: 10px 2px;
+    padding: 20px 4px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 15px;
-    margin-top: 23px;
+    font-size: 25px;
+    text-decoration: none;
+
+}
+
+    /*Ya que no podria centrarlo con el comando margin: auto o center tuve que hacer una flexbox 
+    para el boton y asi centrarlo*/
+.cta-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; 
 }
 
 .cta-button:hover {
     background-color: rgba(249, 67, 0, 0.949);
 }
 
-/*seccion de nhistoria*/
+/*seccion de historia*/
 
 .historia-grid {
     display: grid;
@@ -119,8 +135,10 @@ header:hover {
 }
 
 .historia-grid h2 {
-    grid-column: 2/3;
-    font-size: 2.5rem;
+    grid-column: 1/3;
+    font-size: 2rem;
+
+
 }
 
 .historia-grid p {
@@ -191,7 +209,24 @@ header:hover {
     margin-top: 12px;
 }
 
+.redes-sociales {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
 
+.redes-sociales li {
+    margin: 0 50px;
+}
+
+.redes-sociales a {
+    color: #333;
+    font-size: 24px;
+}
+
+.redes-sociales a:hover {
+    color: #007bff;
+}
 
 
 
@@ -287,5 +322,49 @@ footer {
         display: block;
         border-radius: 50%;
     }
+
+
+}
+
+.home-intro h2 {
+    grid-column: 1/3;
+    font-size: 2rem;
+
+}
+
+.home-intro p {
+    color: azure;
+    font-size: 1.5rem;
+    text-align: justify;
+    line-height: 1.4;
+    text-decoration: none;
+    
+}
+
+
+
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+label {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 
 }
