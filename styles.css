@@ -1,3 +1,24 @@
+/*NOTAS IMPORTANTES
+
+ESTA PAGINA ESTA HECHA PARA SER VISTA EN 3 TIPOS DE DISPOSITIVOS
+
+    1.- Móviles pequeños(menos de 600px)
+    2.- Tablets (600px a 1024px) 
+    3.- Pantallas de escritorio (más de 1024px)
+
+Cada vez que vaya bajando o subiendo la resolución al llegar a los limites establecidos la 
+visualización cambiará
+
+Por defecto la pagina esta hecha principalmente para tablets.
+
+*/
+
+
+
+
+
+
+
 /*Selector Universal*/
 * {
     margin: 0;
@@ -7,6 +28,11 @@
     box-sizing: border-box;
 }
 
+#logo {
+    box-shadow: 
+      0px 0px 10px 5px rgba(255, 132, 0, 0.897), 
+      0px 0px 20px 10px rgba(0, 255, 255, 0.5);
+  }
 
 h1 {
     border: 1px rgb(163, 169, 41) solid;
@@ -58,6 +84,9 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: white;
+
+    /*Al pasar el cursor sobre el menu el color pasa a ser blanco de la fuente*/
 }
 
 
@@ -104,13 +133,13 @@ header:hover {
 
 }
 
-    /*Ya que no podria centrarlo con el comando margin: auto o center tuve que hacer una flexbox 
+/*Ya que no podria centrarlo con el comando margin: auto o center tuve que hacer una flexbox 
     para el boton y asi centrarlo*/
 .cta-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh; 
+    height: 10vh;
 }
 
 .cta-button:hover {
@@ -205,7 +234,7 @@ header:hover {
     border-radius: 50%;
     width: 180px;
     height: 100px;
-    object-fit: cover;
+    object-fit: scale-down;
     margin-top: 12px;
 }
 
@@ -241,9 +270,9 @@ footer {
 
 
 
-/*media querieis para paginas pequeñas*/
+/*media queris para moviles*/
 
-@media (max-width:748px) {
+@media (max-width:600px) {
     .contenedor {
         width: 90%;
     }
@@ -297,26 +326,26 @@ footer {
 
 }
 
-@media screen and (max-width:320px) {
-    .prueb a {
-        background-color: rgb(179, 242, 7);
+@media screen and (max-width:600px) {
+    .prueba {
+        background-color: violet;
     }
 
     .prueba2 {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 }
 
 #logo {
-    width: 400px;
+    width: 600px;
     height: auto;
     margin: 0 auto;
     display: block;
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:600px) {
     #logo {
-        width: 200px;
+        width: 300px;
         height: auto;
         margin: 0 auto;
         display: block;
@@ -338,7 +367,7 @@ footer {
     text-align: justify;
     line-height: 1.4;
     text-decoration: none;
-    
+
 }
 
 
@@ -353,7 +382,9 @@ label {
     margin-bottom: 10px;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -366,5 +397,147 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+
+}
+
+.prueba3 {
+
+    visibility: hidden;
+    /*Debido al pie de pagina se mueve con la pagina, el final de mi pagina se cortaba
+   asi que puse un parrafo invisible para que ese no se vea pero si ponga espacio y deje ver mi pagina bien*/
+}
+
+
+/* Estilo para pantallas de escritorio de 1024px de ancho o más */
+@media (min-width: 1024px) {
+
+    h2 {
+        font-size: 70px;
+        color: magenta;
+        text-align: center;
+
+    }
+
+    .historia-grid h2 {
+        font-size: 50px;
+        color: magenta;
+        text-align: center;
+    }
+
+    .home-intro h2 {
+        font-size: 70px;
+        color: magenta;
+        text-align: center;
+    }
+
+    .estilo h2{
+        font-size: 70px;
+        color: magenta;
+        text-align: center;
+    }
+
+    .cta-button {
+        background-color: rgb(246, 16, 35);
+        color: white;
+        padding: 20px 4px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 45px;
+        text-decoration: none;
+
+    }
+
+    .cta-button:hover {
+        background-color: rgba(100, 0, 249, 0.949);
+    }
+
+    nav ul li a {
+        font-size: 35px;
+    }
+
+    body {
+        background-color: rgb(246, 16, 35);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        /*interlineado*/
+
+    }
+
+    header {
+        background-color: rgb(24, 43, 209);
+        color: rgb(11, 151, 151);
+        padding: 20px 0;
+        text-align: center;
+        text-decoration: none;
+
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .historia-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .historia-grid img,
+    .historia-grid p,
+    .historia-grid h2 {
+        grid-column: 1/2;
+        width: 100%;
+    }
+
+    .historia-grid p {
+        font-size: 35px;
+    }
+
+    .home-intro p {
+        font-size: 35px;
+    }
+
+    .menu-contenedor {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px;
+
+    }
+
+    .card {
+        background-color: rgb(242, 254, 0);
+        border-radius: 20px;
+        width: 320px;
+        margin: 25px;
+        text-align: center;
+        transition: transform 0.3s ease;
+
+    }
+
+    .card:hover {
+        transform: translateY(-25px);
+    }
+
+    .card img {
+        width: 100%;
+        object-fit: fill;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .prueba {
+        background-color: rgb(255, 78, 2);
+    }
+
+    .prueba2 {
+        font-size: 1.2em;
+    }
+
+    #logo {
+        box-shadow: 
+          0px 0px 10px 5px rgba(255, 47, 0, 0.897), 
+          0px 0px 20px 10px rgba(0, 255, 255, 0.5);
+      }
 
 }
